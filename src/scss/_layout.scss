@@ -1,0 +1,11 @@
+@import './variables';
+
+
+body {
+    @include reset-mp;
+  }
+  
+
+ul {
+    list-style: none;
+  }
