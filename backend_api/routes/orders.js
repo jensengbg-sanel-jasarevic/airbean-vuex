@@ -23,7 +23,7 @@ router.post('/', (req, res) => {
 
       console.log(`Order ${order.orderNr} stored in db.`)
 
-        res.send({ msg: 'Thanks', orderNr: order.orderNr, eta: order.eta});
+        res.send({ msg: 'Thanks', orderNr: order.orderNr, eta: order.eta }); 
 });
 
 module.exports = router

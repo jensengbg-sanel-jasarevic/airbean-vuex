@@ -4,19 +4,22 @@
       "id": 1,
       "title": "Bryggkaffe",
       "desc": "Bryggd på månadens bönor.",
-      "price": 39
+      "price": 39,
+      "quantity": 0
     },
     {
       "id": 2,
       "title": "Caffè Doppio",
       "desc": "Bryggd på månadens bönor.",
-      "price": 49
+      "price": 49,
+      "quantity": 0
     },
     {
       "id": 3,
       "title": "Cappuccino",
       "desc": "Bryggd på månadens bönor.",
-      "price": 49
+      "price": 49,
+      "quantity": 0
     },
     {
       "id": 4,
@@ -28,28 +31,18 @@
       "id": 5,
       "title": "Kaffe Latte",
       "desc": "Bryggd på månadens bönor.",
-      "price": 54
+      "price": 54,
+      "quantity": 0
     },
     {
       "id": 6,
       "title": "Cortado",
       "desc": "Bryggd på månadens bönor.",
-      "price": 39
+      "price": 39,
+      "quantity": 0
     }
   ],
   "orders": [
-    {
-      "orderNr": 123456789,
-      "eta": "10"
-    },
-    {
-      "orderNr": 123456789,
-      "eta": "10"
-    },
-    {
-      "orderNr": 123456789,
-      "eta": "10"
-    },
     {
       "orderNr": 123456789,
       "eta": "10"

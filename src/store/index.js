@@ -9,9 +9,11 @@ Vue.use(Vuex)
 export default new Vuex.Store({
   state: {
     apiUrl: 'http://localhost:5000',
+
     products: [],
     cart: [],
-    confirmed: {},
+    // Data obj from backend server (orderNumber & ETA)
+    confirmedOrder: {},
   },
 
 
@@ -24,39 +26,39 @@ export default new Vuex.Store({
       // Gets the index of the first element in the array that has same id
       let index = state.cart.findIndex(item => item.id === product.id);
 
-      // if in cart - update quantity
+      // if product exists in cart, update the quantity
       if(index >= 0) {
    
-      // ++ quantity property
       state.cart[index].quantity++
-      } else {
-      // else add to cart with quantity 1
+
+    } else {
+      // else add product to cart and assign quantity to 1
       product.quantity = 1;
    
       state.cart.push(product) 
     }
   },
+  deleteFromCart(state, id) {
+    let index = state.cart.findIndex(item => item.id === id)
+    state.cart.splice(index, 1)
+  },
   orderConfirmed(state, confirm){
-    state.confirmed = confirm.data;
+    state.confirmedOrder = confirm.data;
   },
   emptyCart(state){
     state.cart = [];
 
     // Route to confirmation
     router.push('/status')
-  },
-  deleteFromCart(state, id) {
-    let index = state.cart.findIndex(item => item.id === id)
-    state.cart.splice(index, 1)
   }
 },
 
 
   actions: {
+    
     async fetchProducts(ctx) {
 
       try {
-
         let resp = await fetch(`${ctx.state.apiUrl}/beans`);
         let data = await resp.json();
 
@@ -66,11 +68,10 @@ export default new Vuex.Store({
         console.error(err)
       }
     },
+
     async postOrder(ctx) {
-      
-      let data = await ax.post(`${ctx.state.apiUrl}/orders`, {
-        items: ctx.state.cart
-      })
+
+      let data = await ax.post(`${ctx.state.apiUrl}/orders`)
 
       // Show order has been successful
       ctx.commit('orderConfirmed', data)
@@ -82,6 +83,7 @@ export default new Vuex.Store({
  
 
   getters: {
+    
     products: state => {
       return state.products;
     }

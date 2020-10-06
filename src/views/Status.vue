@@ -18,7 +18,7 @@ export default {
 
     computed: {
         confirmation(){
-            return this.$store.state.confirmed;
+            return this.$store.state.confirmedOrder;
         }
     }
 }
