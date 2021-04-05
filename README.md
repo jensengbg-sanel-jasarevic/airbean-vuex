@@ -17,10 +17,10 @@ Vue med Vuex och router.
 ## Varför ska ni utföra detta arbete?
 Syftet: 
 
-● goda grunder i ramverk är ett måste en frontendutvecklare för 
+* goda grunder i ramverk är ett måste en frontendutvecklare för 
 anställningsbarhet 
 
-● att förstå hela flödet i en fullstack, från databas till gränssnitt
+* att förstå hela flödet i en fullstack, från databas till gränssnitt
 
 ## Vad ska ni leverera?
 
