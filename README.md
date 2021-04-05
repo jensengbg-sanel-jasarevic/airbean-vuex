@@ -1,4 +1,4 @@
-# Individuell inlämningsuppgift
+# Individuell inlämningsuppgift - Airbean
 
 ## Bakgrundsbeskrivning, frågeställning, avgränsning och mål
 
