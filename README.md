@@ -2,16 +2,16 @@
 
 ## Bakgrundsbeskrivning, frågeställning, avgränsning och mål
 
-Bakgrund: Studenten ska i ett enskilt projekt visa kunskaper, färdigheter 
+**Bakgrund:** Studenten ska i ett enskilt projekt visa kunskaper, färdigheter 
 och kompetenser i att bygga en fullstack app. 
 
-Frågeställning: Hur fungerar en fullstack app med JS från databas till 
+**Frågeställning:** Hur fungerar en fullstack app med JS från databas till 
 gränssnitt 
 
-Mål: att förstå hela flödet från databas till frontend byggt med modernt 
+**Mål:** att förstå hela flödet från databas till frontend byggt med modernt 
 ramverk 
 
-Avgränsning: Backendtekniker är lowdb, Node.js och express, frontend är 
+**Avgränsning:** Backendtekniker är lowdb, Node.js och express, frontend är 
 Vue med Vuex och router. 
 
 ## Varför ska ni utföra detta arbete?
