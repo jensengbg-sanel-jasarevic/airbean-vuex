@@ -48,8 +48,7 @@ För godkänt ska din app fungera utan errors och ha följande funktionalitet:
 
 För väl godkänt ska din app fungera utan errors och ha följande funktionalitet: 
 * Lägga till en profilsida där du kan skapa konto/logga in (enbart namn och email) 
-* Om man gör en beställning när man är inloggad ska ordern kopplas till den 
-inloggade användaren
+* Om man gör en beställning när man är inloggad ska ordern kopplas till den inloggade användaren
 
 **För Godkänt krävs:**
 * En fungerande fullstack app byggd med definierade tekniker ( se uppgiftsbeskrivning ) 
