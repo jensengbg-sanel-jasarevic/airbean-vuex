@@ -36,7 +36,7 @@ drönare (drönare ingår ej i uppgiften).
 Figmaskiss: https://www.figma.com/file/UeUGVefSdgio0sRxPFccJI/AirBean-v.1.0?nodeid=0%3A1 
 
 **Krav på funktionalitet:**
-● För godkänt ska din app fungera utan errors och ha följande funktionalitet: 
+För godkänt ska din app fungera utan errors och ha följande funktionalitet: 
 
 * Gjort enligt Figma skissen
 * Är en single file application (SPA) med vue-router 
@@ -46,7 +46,7 @@ Figmaskiss: https://www.figma.com/file/UeUGVefSdgio0sRxPFccJI/AirBean-v.1.0?node
 * Kunna skicka sin order och få ett svar med en ETA och ordernummer 
 * CSS med enklare SCSS i Vue-komponenterna 
 
-● För väl godkänt ska din app fungera utan errors och ha följande funktionalitet: 
+För väl godkänt ska din app fungera utan errors och ha följande funktionalitet: 
 * Lägga till en profilsida där du kan skapa konto/logga in (enbart namn och email) 
 * Om man gör en beställning när man är inloggad ska ordern kopplas till den 
 inloggade användaren
