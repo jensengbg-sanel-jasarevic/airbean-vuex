@@ -63,8 +63,7 @@ För väl godkänt ska din app fungera utan errors och ha följande funktionalit
 **För Väl Godkänt krävs:**
 * Lägga till en profilsida där du kan skapa konto/logga in (enbart namn och email) 
 * Om man gör en beställning när man är inloggad ska ordern kopplas till den inloggade användaren 
-* Det ska även finnas en orderhistorik-sida där den inloggade användarens ordrar 
-listas 
+* Det ska även finnas en orderhistorik-sida där den inloggade användarens ordrar listas 
 * CSS med SCSS moduler ( partials ) globalt samt i Vue-komponenterna
 
 **Inlämning:**
