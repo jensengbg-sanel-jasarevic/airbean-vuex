@@ -3,12 +3,12 @@ import Vuex from 'vuex';
 import ax from 'axios';
 import router from './../router'
 
-
 Vue.use(Vuex)
 
 export default new Vuex.Store({
   state: {
     apiUrl: 'http://localhost:5000',
+    apiUrlCloud: 'https://airbean-api-server.herokuapp.com',
 
     products: [],
     cart: [],
@@ -21,6 +21,7 @@ export default new Vuex.Store({
     updateProducts(state, data) {
       state.products = data.menu;
     },
+
     addCart(state, product) {
        // Check if product exists in cart - what index
       // Gets the index of the first element in the array that has same id
@@ -38,13 +39,16 @@ export default new Vuex.Store({
       state.cart.push(product) 
     }
   },
+
   deleteFromCart(state, id) {
     let index = state.cart.findIndex(item => item.id === id)
     state.cart.splice(index, 1)
   },
+  
   orderConfirmed(state, confirm){
     state.confirmedOrder = confirm.data;
   },
+  
   emptyCart(state){
     state.cart = [];
 
@@ -59,7 +63,7 @@ export default new Vuex.Store({
     async fetchProducts(ctx) {
 
       try {
-        let resp = await fetch(`${ctx.state.apiUrl}/beans`);
+        let resp = await fetch(`${ctx.state.apiUrlCloud}/beans`);
         let data = await resp.json();
 
         ctx.commit('updateProducts', data)
@@ -71,7 +75,7 @@ export default new Vuex.Store({
 
     async postOrder(ctx) {
 
-      let data = await ax.post(`${ctx.state.apiUrl}/orders`)
+      let data = await ax.post(`${ctx.state.apiUrlCloud}/orders`)
 
       // Show order has been successful
       ctx.commit('orderConfirmed', data)

@@ -35,6 +35,8 @@ import Navigation from "../components/Navigation"
 import Cart from "../components/Cart"
 
 export default {
+  name: "Menu",
+
   components:{ 
   Navigation,
   Cart
