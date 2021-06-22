@@ -7,8 +7,9 @@ Vue.use(Vuex)
 
 export default new Vuex.Store({
   state: {
-    apiUrl: 'http://localhost:5000',
-    apiUrlCloud: 'https://airbean-api-server.herokuapp.com',
+    // Local API server URL: http://localhost:5000
+    // Cloud API server URL: https://airbean-api-server.herokuapp.com
+    API_URL: 'https://airbean-api-server.herokuapp.com',
 
     products: [],
     cart: [],
@@ -63,7 +64,7 @@ export default new Vuex.Store({
     async fetchProducts(ctx) {
 
       try {
-        let resp = await fetch(`${ctx.state.apiUrlCloud}/beans`);
+        let resp = await fetch(`${ctx.state.API_URL}/beans`);
         let data = await resp.json();
 
         ctx.commit('updateProducts', data)
@@ -75,7 +76,7 @@ export default new Vuex.Store({
 
     async postOrder(ctx) {
 
-      let data = await ax.post(`${ctx.state.apiUrlCloud}/orders`)
+      let data = await ax.post(`${ctx.state.API_URL}/orders`)
 
       // Show order has been successful
       ctx.commit('orderConfirmed', data)
